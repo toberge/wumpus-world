@@ -12,7 +12,62 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: e99dfa5c6de377445891bff9f7ed3dfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShrekBody
+    second: {fileID: 2100000, guid: dc0792f4fabfa854d85561ee69ae331d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShrekBody.001
+    second: {fileID: 2100000, guid: b6fd599c6ec16ca4ab0f436c50961347, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShrekHead
+    second: {fileID: 2100000, guid: fd6d1a5c3724e3e4186143c9df45f7f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeball_l
+    second: {fileID: 2100000, guid: 09b8fb44b11e88d4e8117c41d5922b71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeball_r
+    second: {fileID: 2100000, guid: 47af9dcf9787dd749b236f8d27c35e29, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: shrekball
+    second: {fileID: 2800000, guid: 42eb20fabba4af147b47b1f2d441fdfa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: shrekbody
+    second: {fileID: 2800000, guid: 8d7df1f1dbf3bc049a0c49555363ab45, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: shrekbodyN
+    second: {fileID: 2800000, guid: 23d8a9e8d43491b468046eacc5402efc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: shrekhead
+    second: {fileID: 2800000, guid: 3933b4bb71295f5428cb422b3b2404f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: shrekheadN
+    second: {fileID: 2800000, guid: 3fe1a1723aa717948b8e075f2fd5aa20, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
