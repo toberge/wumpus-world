@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private int smellLayer;
     private int windLayer;
     public Transform wumpusPoint;
+    public Wumpus wumpus;
 
     void OnTriggerEnter(Collider other)
     {
@@ -26,8 +27,8 @@ public class Player : MonoBehaviour
         }
         else if (other.transform.gameObject.layer == wumpusLayer)
         {
-            transform.position.x = wumpusPoint.position.x;
-            transform.position.z = wumpusPoint.position.z;
+            transform.position = new Vector3(wumpusPoint.position.x, transform.position.y, wumpusPoint.position.z);
+            wumpus.StartMoving();
         }
     }
 
@@ -45,7 +46,6 @@ public class Player : MonoBehaviour
         wumpusLayer = LayerMask.NameToLayer("Wumpus");
         smellLayer = LayerMask.NameToLayer("Smell");
         windLayer = LayerMask.NameToLayer("Wind");
-        Debug.Log(holeLayer);
         rigidbody = GetComponent<Rigidbody>();
     }
 }
