@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     new private Rigidbody rigidbody;
     private int holeLayer;
     private int wumpusLayer;
+    private int smellLayer;
     private int windLayer;
 
     void OnTriggerEnter(Collider other)
@@ -16,36 +17,29 @@ public class Player : MonoBehaviour
         {
             Debug.Log("dæjå");
             rigidbody.isKinematic = false;
+            other.transform.gameObject.GetComponent<AudioSource>().Play();
         }
-        else if (other.transform.gameObject.layer == windLayer)
+        else if (other.transform.gameObject.layer == windLayer || other.transform.gameObject.layer == smellLayer)
         {
-            Debug.Log("wind's howlin'");
             other.transform.gameObject.GetComponent<AudioSource>().Play();
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.transform.gameObject.layer == windLayer)
+        if (other.transform.gameObject.layer == windLayer || other.transform.gameObject.layer == smellLayer)
         {
-            Debug.Log("wind's howlin'");
             other.transform.gameObject.GetComponent<AudioSource>().Stop();
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         holeLayer = LayerMask.NameToLayer("Hole");
         wumpusLayer = LayerMask.NameToLayer("Wumpus");
+        smellLayer = LayerMask.NameToLayer("Smell");
         windLayer = LayerMask.NameToLayer("Wind");
         Debug.Log(holeLayer);
         rigidbody = GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
