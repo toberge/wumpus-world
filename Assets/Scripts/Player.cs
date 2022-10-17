@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
         else if (other.transform.gameObject.layer == wumpusLayer)
         {
             transform.position = new Vector3(wumpusPoint.position.x, transform.position.y, wumpusPoint.position.z);
+            transform.Rotate(0, Vector3.Angle(new Vector3(transform.forward.x, 0, transform.forward.z), Vector3.forward), 0);
+            //transform.forward = Quaternion.Euler(0, Vector3.Angle(new Vector3(transform.forward.x, 0, transform.forward.z), Vector3.forward), 0);
             wumpus.StartMoving();
         }
     }
