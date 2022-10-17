@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private int wumpusLayer;
     private int smellLayer;
     private int windLayer;
+    public Transform wumpusPoint;
 
     void OnTriggerEnter(Collider other)
     {
@@ -22,6 +23,11 @@ public class Player : MonoBehaviour
         else if (other.transform.gameObject.layer == windLayer || other.transform.gameObject.layer == smellLayer)
         {
             other.transform.gameObject.GetComponent<AudioSource>().Play();
+        }
+        else if (other.transform.gameObject.layer == wumpusLayer)
+        {
+            transform.position.x = wumpusPoint.position.x;
+            transform.position.z = wumpusPoint.position.z;
         }
     }
 
