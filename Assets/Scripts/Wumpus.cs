@@ -6,27 +6,44 @@ public class Wumpus : MonoBehaviour
     private Animator animator;
     public float speedMultiplier = 2f;
     public Transform wumpusPoint;
+    public Player player;
+    private Vector3 originalPosition;
+    private AudioSource audioSource;
+    private bool isWalking;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        originalPosition = transform.position;
+        player.onReset += Reset;
+        audioSource = GetComponent<AudioSource>();
+        speed = Vector3.back * 0.032f * speedMultiplier;
+    }
+
+    private void Reset()
+    {
+        transform.position = originalPosition;
+        audioSource.Stop();
+        animator.enabled = true;
     }
 
     public void StartMoving()
     {
-        speed = Vector3.back * 0.032f * speedMultiplier;
-        GetComponent<AudioSource>().Play();
+        isWalking = true;
+        audioSource.Play();
     }
 
     void Update()
     {
-        if (transform.position.z > wumpusPoint.position.z + 4)
+        if (isWalking && transform.position.z > wumpusPoint.position.z + 4)
         {
             transform.position += speed;
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0)
+        else if (isWalking)
         {
             animator.enabled = false;
+            player.Die();
+            isWalking = false;
         }
     }
 }

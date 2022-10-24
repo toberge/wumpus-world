@@ -14,12 +14,9 @@ public class WumpusRoom : MonoBehaviour
     {
         if (other.gameObject.layer == playerLayer)
         {
-            var request = new TeleportRequest();
             var origin = other.transform.parent.parent;
-            request.destinationPosition = new Vector3(wumpusPoint.position.x, origin.position.y, wumpusPoint.position.z);
-            request.destinationRotation = wumpusPoint.rotation;
-            request.matchOrientation = MatchOrientation.TargetUpAndForward;
-            tp.QueueTeleportRequest(request);
+            var destination = new Vector3(wumpusPoint.position.x, origin.position.y, wumpusPoint.position.z);
+            other.gameObject.GetComponent<Player>().TeleportTo(destination, wumpusPoint.rotation);
             wumpus.StartMoving();
         }
     }
