@@ -56,6 +56,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        // Set insane gravity.
+        Physics.gravity = new Vector3(0, -20, 0);
         holeLayer = LayerMask.NameToLayer("Hole");
         wumpusLayer = LayerMask.NameToLayer("Wumpus");
     }
