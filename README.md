@@ -28,7 +28,7 @@ Implementation of Wumpus World in VR.
 - Fly swarm: [Brsjak on Freesound](https://freesound.org/people/Brsjak/sounds/623134/)
 - Wind: [Pavelvon on Freesound](https://freesound.org/people/pavelvon/sounds/396533/)
 - Goofy yell: [this clip &copy; Disney](https://www.youtube.com/watch?v=MUL5w91dzbo)
-- Victory jingle: [Ocarina of Time SFX](https://www.youtube.com/watch?v=5VRr9NG7RE0)
+- Victory jingle: [Ocarina of Time SFX &copy; Nintendo](https://www.youtube.com/watch?v=5VRr9NG7RE0)
 - Wumpus OST:
-  - [Remix of Giorno's theme by Samuel Kim Music](https://www.youtube.com/watch?v=hRok6zPZKMA)
-  - [What are you doing in my swamp from Shrek](https://www.youtube.com/watch?v=psFzJv8g6jc)
+  - [Remix of Giorno's theme by Samuel Kim Music, original &copy; David Production](https://www.youtube.com/watch?v=hRok6zPZKMA)
+  - ["What are you doing in my swamp" from Shrek &copy; Dreamworks](https://www.youtube.com/watch?v=psFzJv8g6jc)
